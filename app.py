@@ -48,8 +48,7 @@ st.markdown(
             Page 2 — Clustering
         </div>
         <div style="color:rgba(31,48,32,0.85); line-height:1.55;">
-            Halaman ini menampilkan hasil segmentasi pelanggan berbasis clustering,
-            meliputi:
+            Halaman ini menampilkan hasil segmentasi pelanggan berbasis clustering,:
             <ul style="margin:8px 0 0 18px;">
             </ul>
             Segmentasi digunakan untuk mengidentifikasi karakteristik utama setiap kelompok pelanggan.
