@@ -123,116 +123,87 @@ div[data-testid="stDataFrame"] {
   margin: 2px 0;
 }
 
-/* CLUSTER PAGE (pages/2_cluster.py)
-   Selaras dengan tema hijau, aman di background putih */
+/* =========================================================
+   CLUSTER PAGE (pages/2_cluster.py)
+   Selaras tema hijau, aman di background putih
+========================================================= */
 
-/* KPI khusus cluster page */
-.kpi-cluster{
+.cluster-wrap {
+  background: linear-gradient(135deg, rgba(105,138,107,0.10), rgba(169,194,170,0.14));
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: 14px 14px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  margin-bottom: 12px;
+}
+
+.cluster-title {
+  font-weight: 900;
+  font-size: 16px;
+  color: #1F3020;
+  margin-bottom: 8px;
+}
+
+.cluster-note {
+  color: rgba(31,48,32,0.78);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* KPI khusus cluster */
+.kpi-cluster {
   background: #F6FAF6;
   border: 1px solid #E3EEE4;
   border-radius: 14px;
   padding: 12px 14px;
-  margin: 6px 0 10px 0;
 }
-.kpi-cluster .kpi-title{
+.kpi-cluster .kpi-title {
   color:#1F3020;
   font-weight:800;
   font-size:12px;
-  opacity:0.85;
+  opacity:0.9;
 }
-.kpi-cluster .kpi-value{
+.kpi-cluster .kpi-value {
   color:#0F1C10;
   font-weight:900;
-  font-size:20px;
-  margin-top:4px;
+  font-size:18px;
+  margin-top:2px;
 }
-.kpi-cluster .kpi-sub{
+.kpi-cluster .kpi-sub {
   color:#4B6650;
   font-size:12px;
   margin-top:2px;
-  opacity:0.9;
 }
 
-/* quote box */
-.quote-box{
-  border: 1px solid #E3EEE4;
-  background: linear-gradient(135deg, rgba(105,138,107,0.10), rgba(169,194,170,0.14));
+/* box ringkasan */
+.cluster-box {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.06);
   border-radius: 14px;
-  padding: 12px 14px;
-  margin: 10px 0 16px 0;
-  font-style: italic;
-  line-height: 1.6;
-  color: rgba(15,28,16,0.95);
+  padding: 12px 12px;
 }
 
-/* judul panel */
-.panel-title{
-  font-weight: 900;
-  color:#1F3020;
-  margin: 6px 0 10px 0;
-}
-
-/* wrapper tabel */
-.table-wrap{
-  border: 1px solid #E3EEE4;
-  background: #FAFFFA;
-  border-radius: 14px;
-  padding: 10px 12px;
-}
-
-/* tabel cluster: kontrol lebar kolom biar keterangan tidak kepotong */
-.cluster-table{
+/* table ringkasan cluster (rapi, tidak kepotong) */
+.cluster-table {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-  font-size: 14px;
+  font-size: 13px;
 }
-
-.cluster-table thead th{
-  text-align: left;
-  padding: 10px 8px;
-  border-bottom: 1px solid rgba(31,48,32,0.12);
-  color:#1F3020;
-  font-weight: 900;
-}
-
-.cluster-table th,
-.cluster-table td{
+.cluster-table th, .cluster-table td {
+  border-bottom: 1px solid rgba(0,0,0,0.06);
   padding: 10px 8px;
   vertical-align: top;
-  border-bottom: 1px solid rgba(31,48,32,0.08);
   word-wrap: break-word;
-  color: rgba(15,28,16,0.92);
 }
-
-.cluster-table tbody tr:last-child td{
-  border-bottom: none;
-}
-
-/* kolom cluster dipersempit */
-.th-cluster,
-.td-cluster{
-  width: 60px;
-  text-align: center;
-  font-weight: 900;
-  color:#1F3020;
-}
-
-/* kolom judul */
-.td-judul{
-  width: 220px;
+.cluster-table thead th {
   font-weight: 800;
-  color:#1F3020;
+  color: #1F3020;
+  background: rgba(105,138,107,0.10);
 }
+.cluster-table tr:last-child td { border-bottom: none; }
 
-/* kolom inti */
-.td-inti{
-  width: 180px;
-  opacity: 0.95;
-}
+.ct-col { width: 90px; text-align: center; font-weight: 900; }
+.ct-feature { width: 220px; font-weight: 800; color:#1F3020; }
+.ct-value { width: auto; line-height: 1.5; }
 
-/* kolom keterangan dibuat paling lebar */
-.td-keterangan{
-  width: auto;
-  line-height: 1.6;
-}
