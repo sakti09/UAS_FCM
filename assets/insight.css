@@ -1,0 +1,238 @@
+/*BASE */
+.stApp { background-color: #ffffff; }
+h1, h2, h3 { color: #1F3020; }
+.stCaption { color: rgba(31,48,32,0.75); }
+
+/* DATAFRAME */
+div[data-testid="stDataFrame"] {
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+  padding: 8px;
+  background-color: #FAFAFA;
+}
+
+/* MENU CARD*/
+.card button {
+  width: 100% !important;
+  height: 92px !important;
+  border-radius: 18px !important;
+  border: none !important;
+  color: white !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-align: left !important;
+  padding: 16px 18px !important;
+  white-space: pre-line !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.10) !important;
+}
+.card button:hover {
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+  transition: all 0.15s ease-in-out;
+}
+
+/* Card colors */
+.card-1 button { background: linear-gradient(135deg, #3A4A3B, #1F3020) !important; }
+.card-2 button { background: linear-gradient(135deg, #698A6B, #3A4A3B) !important; }
+.card-3 button { background: linear-gradient(135deg, #A9C2AA, #698A6B) !important; color:#0F1C10 !important; }
+.card-4 button { background: linear-gradient(135deg, #1F3020, #0F1C10) !important; }
+.card-5 button { background: linear-gradient(135deg, #0F1C10, #3A4A3B) !important; }
+
+/* KPI*/
+.kpi-wrap {
+  background: #F6FAF6;
+  border: 1px solid #E3EEE4;
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+.kpi-title {
+  color:#1F3020;
+  font-weight:800;
+  font-size:12px;
+  opacity:0.9;
+}
+.kpi-value {
+  color:#0F1C10;
+  font-weight:900;
+  font-size:18px;
+  margin-top:2px;
+}
+.kpi-sub {
+  color:#4B6650;
+  font-size:12px;
+  margin-top:2px;
+}
+
+/* =YEAR PANEL MENU 3 */
+.year-panel {
+  border-radius: 16px;
+  padding: 12px 12px 6px 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  margin-bottom: 12px;
+}
+.year-title {
+  font-weight: 900;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+/* MONTHLY TREN MENU 4 */
+.month-title {
+  font-weight: 900;
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #1F3020;
+}
+
+.month-panel {
+  border-radius: 16px;
+  padding: 10px 10px 6px 10px;
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+  margin-bottom: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(105,138,107,0.10),
+    rgba(169,194,170,0.10)
+  );
+}
+
+/* LANDING PAGE (APP.PY)
+   Sinkron untuk beberapa box (Insight + Clustering) */
+
+.landing-box {
+  margin-top: 18px;              /* sebelumnya 40px → biar 2 box tidak terlalu jauh */
+  padding: 18px 18px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(105,138,107,0.16),
+    rgba(169,194,170,0.22)
+  );
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06);
+}
+
+/* rapikan list di dalam landing box */
+.landing-box ul {
+  margin: 8px 0 0 18px;
+  padding: 0;
+}
+.landing-box li {
+  margin: 2px 0;
+}
+
+/* CLUSTER PAGE (pages/2_cluster.py)
+   Selaras dengan tema hijau, aman di background putih */
+
+/* KPI khusus cluster page */
+.kpi-cluster{
+  background: #F6FAF6;
+  border: 1px solid #E3EEE4;
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin: 6px 0 10px 0;
+}
+.kpi-cluster .kpi-title{
+  color:#1F3020;
+  font-weight:800;
+  font-size:12px;
+  opacity:0.85;
+}
+.kpi-cluster .kpi-value{
+  color:#0F1C10;
+  font-weight:900;
+  font-size:20px;
+  margin-top:4px;
+}
+.kpi-cluster .kpi-sub{
+  color:#4B6650;
+  font-size:12px;
+  margin-top:2px;
+  opacity:0.9;
+}
+
+/* quote box */
+.quote-box{
+  border: 1px solid #E3EEE4;
+  background: linear-gradient(135deg, rgba(105,138,107,0.10), rgba(169,194,170,0.14));
+  border-radius: 14px;
+  padding: 12px 14px;
+  margin: 10px 0 16px 0;
+  font-style: italic;
+  line-height: 1.6;
+  color: rgba(15,28,16,0.95);
+}
+
+/* judul panel */
+.panel-title{
+  font-weight: 900;
+  color:#1F3020;
+  margin: 6px 0 10px 0;
+}
+
+/* wrapper tabel */
+.table-wrap{
+  border: 1px solid #E3EEE4;
+  background: #FAFFFA;
+  border-radius: 14px;
+  padding: 10px 12px;
+}
+
+/* tabel cluster: kontrol lebar kolom biar keterangan tidak kepotong */
+.cluster-table{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 14px;
+}
+
+.cluster-table thead th{
+  text-align: left;
+  padding: 10px 8px;
+  border-bottom: 1px solid rgba(31,48,32,0.12);
+  color:#1F3020;
+  font-weight: 900;
+}
+
+.cluster-table th,
+.cluster-table td{
+  padding: 10px 8px;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(31,48,32,0.08);
+  word-wrap: break-word;
+  color: rgba(15,28,16,0.92);
+}
+
+.cluster-table tbody tr:last-child td{
+  border-bottom: none;
+}
+
+/* kolom cluster dipersempit */
+.th-cluster,
+.td-cluster{
+  width: 60px;
+  text-align: center;
+  font-weight: 900;
+  color:#1F3020;
+}
+
+/* kolom judul */
+.td-judul{
+  width: 220px;
+  font-weight: 800;
+  color:#1F3020;
+}
+
+/* kolom inti */
+.td-inti{
+  width: 180px;
+  opacity: 0.95;
+}
+
+/* kolom keterangan dibuat paling lebar */
+.td-keterangan{
+  width: auto;
+  line-height: 1.6;
+}
