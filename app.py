@@ -51,10 +51,6 @@ st.markdown(
             Halaman ini menampilkan hasil segmentasi pelanggan berbasis clustering,
             meliputi:
             <ul style="margin:8px 0 0 18px;">
-              <li>Distribusi jumlah dan proporsi cluster</li>
-              <li>Rata-rata harga transaksi per cluster</li>
-              <li>Distribusi kategori produk per cluster</li>
-              <li>Distribusi lokasi mall per cluster</li>
             </ul>
             Segmentasi digunakan untuk mengidentifikasi karakteristik utama setiap kelompok pelanggan.
         </div>
