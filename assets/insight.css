@@ -98,8 +98,7 @@ div[data-testid="stDataFrame"] {
   );
 }
 
-/* LANDING PAGE (APP.PY)
-   Sinkron untuk beberapa box (Insight + Clustering) */
+/* LANDING PAGE (APP.PY) */
 
 .landing-box {
   margin-top: 18px;              /* sebelumnya 40px → biar 2 box tidak terlalu jauh */
@@ -123,10 +122,7 @@ div[data-testid="stDataFrame"] {
   margin: 2px 0;
 }
 
-/* =========================================================
-   CLUSTER PAGE (pages/2_cluster.py)
-   Selaras tema hijau, aman di background putih
-========================================================= */
+/* CLUSTER PAGE (pages/2_cluster.py) */
 
 .cluster-wrap {
   background: linear-gradient(135deg, rgba(105,138,107,0.10), rgba(169,194,170,0.14));
@@ -141,7 +137,7 @@ div[data-testid="stDataFrame"] {
   font-weight: 900;
   font-size: 16px;
   color: #1F3020;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .cluster-note {
@@ -175,7 +171,7 @@ div[data-testid="stDataFrame"] {
   margin-top:2px;
 }
 
-/* box ringkasan */
+/* panel ringkasan table */
 .cluster-box {
   background: #ffffff;
   border: 1px solid rgba(0,0,0,0.06);
@@ -203,7 +199,7 @@ div[data-testid="stDataFrame"] {
 }
 .cluster-table tr:last-child td { border-bottom: none; }
 
-.ct-col { width: 90px; text-align: center; font-weight: 900; }
+.ct-col { width: 92px; text-align: center; font-weight: 900; }
 .ct-feature { width: 220px; font-weight: 800; color:#1F3020; }
 .ct-value { width: auto; line-height: 1.5; }
 
