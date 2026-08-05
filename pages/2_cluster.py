@@ -6,18 +6,17 @@ from pathlib import Path
 
 st.set_page_config(page_title="Clustering", layout="wide")
 
-# keterangan: load CSS global theme (insight.css)
+# load CSS global 
 def load_css(path: str = "assets/insight.css"):
     css_path = Path(path)
     if css_path.exists():
         st.markdown(f"<style>{css_path.read_text()}</style>", unsafe_allow_html=True)
-
 load_css()
 
 st.title("Page 2 — Clustering Dashboard")
 st.caption("Halaman segmentasi pelanggan berdasarkan hasil clustering. Input wajib berupa CSV hasil clustering.")
 
-# keterangan: upload CSV (wajib)
+# upload CSV 
 uploaded = st.file_uploader("Upload CSV (hasil clustering)", type=["csv"])
 if not uploaded:
     st.info("Upload file CSV hasil clustering untuk menampilkan dashboard.")
@@ -25,9 +24,7 @@ if not uploaded:
 
 df = pd.read_csv(uploaded)
 
-# -------------------------
 # Helpers
-# -------------------------
 def pick_col(df_in, candidates):
     lower_map = {c.lower(): c for c in df_in.columns}
     for cand in candidates:
@@ -80,9 +77,7 @@ def apply_filters(df_in: pd.DataFrame, filter_state: dict) -> pd.DataFrame:
                 out = out[out[col].astype(str).isin(sel)]
     return out
 
-# -------------------------
-# Detect columns based on your cluster CSV
-# -------------------------
+# Detect columns
 cluster_col = pick_col(df, ["cluster"])
 gender_col = pick_col(df, ["gender"])
 age_col = pick_col(df, ["age"])
@@ -94,9 +89,7 @@ price_orig_col = pick_col(df, ["price_original"])
 price_col = pick_col(df, ["price"])
 date_col = pick_col(df, ["invoice_date"])
 
-# -------------------------
 # Validate minimal requirements for spend
-# -------------------------
 missing_core = []
 if cluster_col is None:
     missing_core.append("`cluster`")
@@ -128,9 +121,7 @@ if date_col is not None:
 # Normalize cluster type
 df[cluster_col] = df[cluster_col].astype(str)
 
-# -------------------------
-# Sidebar-like controls on right (mirip Page 1)
-# -------------------------
+# Sidebar
 left, right = st.columns([3, 1], gap="large")
 
 with right:
@@ -215,9 +206,7 @@ with left:
         st.warning("Data kosong setelah filter.")
         st.stop()
 
-    # -------------------------
     # Insight builder
-    # -------------------------
     def insight_by(df_in: pd.DataFrame, group_col: str):
         out = (
             df_in.groupby(group_col, dropna=False)
@@ -279,9 +268,7 @@ with left:
         )
         st.plotly_chart(fig3, use_container_width=True, key="cluster_pie")
 
-    # -------------------------
-    # Cluster profiling (otomatis, sinkron kolom CSV cluster)
-    # -------------------------
+     # Cluster profiling
     st.subheader("Profil Cluster (Ringkasan Otomatis)")
 
     def top_dist(df_in, col, topk=6):
