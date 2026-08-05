@@ -3,7 +3,7 @@ from pathlib import Path
 
 st.set_page_config(page_title="Mall Insight", layout="wide")
 
-# keterangan: load CSS utama untuk seluruh halaman
+# load CSS
 def load_css(path: str = "assets/insight.css"):
     css_path = Path(path)
     if css_path.exists():
@@ -11,11 +11,9 @@ def load_css(path: str = "assets/insight.css"):
 
 load_css()
 
-# keterangan: judul dan deskripsi halaman utama
 st.title("Mall Insight Dashboard")
 st.caption("Halaman utama dashboard analisis. Navigasi halaman tersedia pada sidebar kiri.")
 
-# keterangan: informasi halaman Insight (Page 1)
 st.markdown(
     """
     <div class="landing-box">
@@ -40,7 +38,7 @@ st.markdown(
 
 st.write("")
 
-# keterangan: informasi halaman Clustering (Page 2)
+#(Page 2)
 st.markdown(
     """
     <div class="landing-box">
