@@ -460,7 +460,7 @@ elif st.session_state.insight_subpage == "trend_monthly":
             fig_bar.update_xaxes(tickangle=rot)
             fig_bar.update_layout(height=260, margin=dict(l=10, r=10, t=40, b=10))
 
-            # ✅ KEY UNIK: bedakan antara section bar-only vs section pie
+            #KEY UNIK
             bar_key = f"m_{section_tag}_bar_month{m}_{group_by}_{y_col}_{year_pick}_{top_mode}_{top_n}"
             st.plotly_chart(fig_bar, use_container_width=True, key=bar_key)
 
@@ -489,7 +489,7 @@ elif st.session_state.insight_subpage == "trend_monthly":
             st.markdown("</div>", unsafe_allow_html=True)
 
     with main_left:
-        st.markdown("### Mini Bar Chart per Bulan (tanpa scroll)")
+        st.markdown("### Mini Bar Chart per Bulan ")
         a, b, c = st.columns(3, gap="medium")
         for m in colA:
             month_panel(a, m, show_pie=False, section_tag="top")
@@ -499,7 +499,7 @@ elif st.session_state.insight_subpage == "trend_monthly":
             month_panel(c, m, show_pie=False, section_tag="top")
 
         st.markdown("---")
-        st.markdown("### Pie Chart per Bulan (scroll)")
+        st.markdown("### Pie Chart per Bulan")
         a2, b2, c2 = st.columns(3, gap="medium")
         for m in colA:
             month_panel(a2, m, show_pie=True, section_tag="bottom")
